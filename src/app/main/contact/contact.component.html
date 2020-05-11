@@ -1,0 +1,76 @@
+<div class="about-main">
+  <div class="about-page" jzScroll>
+    <div class="about-main-content scroll-content">
+      <div class="border-block"></div>
+      <div class="heading-wrapper">
+        <div class="about-main-heading">
+          <h2 class="">Contact</h2>
+          <h5 class="">Get in Touch</h5>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="block-title">
+            <h3 class="">Get in Touch</h3>
+          </div>
+          <p class="contact-text">Свяжитесь со мной любым удобным для Вас способом или напишите мне сообщение и я сам
+            с Вами свяжусь :)</p>
+          <div class="contact-info-block">
+            <div class="ci-icon"><i class="pe-7s-call"></i></div>
+            <div class="ci-text">
+              <h5 class="">+380951689334</h5>
+            </div>
+          </div>
+          <div class="contact-info-block">
+            <div class="ci-icon"><i class="fab fa-skype"></i></div>
+            <div class="ci-text">
+              <h5 class="">zmd-jimmz</h5>
+            </div>
+          </div>
+          <div class="contact-info-block">
+            <div class="ci-icon"><i class="pe-7s-mail"></i></div>
+            <div class="ci-text">
+              <h5 class="">jimmz@mail.ru</h5>
+            </div>
+          </div>
+          <div class="contact-info-block">
+            <div class="ci-icon"><i class="fa fa-check-circle"></i></div>
+            <div class="ci-text">
+              <h5 class=""><a class="" href="https://freelancehunt.com/freelancer/JimmZ.html">Freelance Avilable</a></h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="block-title">
+            <h3 class="">Contact Form</h3>
+          </div>
+          <form [formGroup]="form" id="form" name="form" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <input class="contact-input" formControlName="name" jzContactLine name="name" placeholder="Full name" required="" type="text">
+              <div class="underline"></div>
+              <i class="icon pe-7s-user"></i>
+              <span class="help-block" *ngIf="form.get('name').invalid && form.get('name').touched">Invalid name</span>
+            </div>
+            <div class="form-group">
+              <input class="contact-input" formControlName="email" jzContactLine name="email" placeholder="Email Address" required="" type="email">
+              <div class="underline"></div>
+              <i class="icon pe-7s-mail"></i>
+              <span class="help-block" *ngIf="form.get('email').invalid && form.get('email').touched">Invalid email</span>
+            </div>
+            <div class="form-group">
+              <textarea class="contact-input" formControlName="comment" jzContactLine name="comment" placeholder="Message for Me" required="" type="text"></textarea>
+              <div class="underline"></div>
+              <i class="icon pe-7s-comment"></i>
+              <span class="help-block" *ngIf="form.get('comment').invalid && form.get('comment').touched">Invalid comment</span>
+            </div>
+            <div class="form-group">
+              <div class="send-contact">
+                <button class="button" type="submit" [disabled]="form.invalid">Send message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

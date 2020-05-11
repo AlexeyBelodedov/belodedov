@@ -1,0 +1,58 @@
+<div class="about-main portfolio-detail" id="modal">
+  <div class="about-page" jzScroll>
+    <div class="about-main-content scroll-content">
+      <div class="border-block"></div>
+      <div class="heading-wrapper">
+        <div class="portfolio-navs">
+          <div class="nav-item">
+            <a class="nav-left" (click)="navPrevious()"><i class="pe-7s-icon pe-7s-angle-left"></i></a>
+            <a class="nav-right" (click)="navNext()"><i class="pe-7s-icon pe-7s-angle-right"></i></a>
+          </div>
+          <div class="nav-item">
+            <a (click)="close()" class="nav-close"><i class="pe-7s-icon pe-7s-close"></i></a>
+          </div>
+        </div>
+        <div class="about-main-heading">
+          <h1 class="">{{ work.name }}</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-7">
+          <img class="portfolio-detail-img" alt="" src="{{ work.img }}">
+        </div>
+        <div class="col-sm-5">
+          <div class="block-title">
+            <h3 class="">Description</h3>
+          </div>
+          <ul class="project-general-info">
+            <li>
+              <p>
+                <i class="fa fa-user"></i>
+                {{ work.author }}
+              </p>
+            </li>
+            <li *ngIf="work.url">
+              <p>
+                <i class="fa fa-globe"></i>
+                <a href="{{ work.url }}">{{ work.url }}</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <i class="fa fa-calendar"></i>
+                {{ work.date }}
+              </p>
+            </li>
+          </ul>
+          <p class="text-justify"></p>
+          <div class="block-title">
+            <h3 class="">Technology</h3>
+          </div>
+          <ul class="tags">
+            <li *ngFor="let tech of work.tech"><a class="">{{tech}}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

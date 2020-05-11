@@ -1,0 +1,55 @@
+.aside-container {
+  width: 200px !important;
+  background-color: #fff;
+  z-index: 1;
+  position: fixed;
+  height: 100%
+}
+.container-fluid {
+  position: relative;
+  height: 100%;
+}
+#main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background: url('./../assets/images/about-bg.jpg') 0 0/cover;
+  margin-left: 200px;
+  overflow: hidden;
+}
+
+.container-fluid, .row {
+  position: relative;
+  height: 100%
+}
+
+router-outlet.main-router ~ * {
+  position: absolute;
+  width: 100%;
+  padding: 25px 5%;
+  height: 100%
+}
+
+@media (max-width: 990px) {
+  .aside-container {
+    z-index: 3;
+    margin-left: -200px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    height: calc(100% - 50px);
+    top: 50px;
+    transition: margin-left 0.3s ease;
+  }
+  #main {
+    margin-left: 0;
+    margin-top: 40px;
+  }
+  router-outlet.about-router ~ * {
+    padding: 0;
+    margin-top: 50px
+  }
+  .aside-container.opened {
+    margin-left: 0;
+  }
+}

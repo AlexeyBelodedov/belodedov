@@ -1,0 +1,24 @@
+<div class="about-main">
+  <div class="about-page" jzScroll>
+    <div class="about-main-content scroll-content" id="content">
+      <div class="border-block"></div>
+      <div class="heading-wrapper">
+        <div class="about-main-heading">
+          <h2 class="">Portfolio</h2>
+          <h5 class="">My Best Works</h5>
+        </div>
+      </div>
+      <div class="row portfolio-tabs">
+        <a *ngFor="let work of works" class="work" (click)="show(work)" jzPortfolioHover="work">
+          <img class="img-fluid work-preview" alt="Image" src="{{ work.img }}">
+          <div class="work-info">
+            <h5 class="">{{ work.name }}</h5>
+            <i class="far fa-eye"></i>
+            <i class="pe-7s-display2"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<jz-modal *ngIf="work"></jz-modal>

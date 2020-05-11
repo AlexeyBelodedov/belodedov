@@ -1,0 +1,121 @@
+aside {
+  position: relative;
+  height: 100%;
+  max-width: 100%;
+  outline: 0;
+  direction: ltr;
+  -webkit-box-shadow: 0 1px 10px rgba(0,0,0,.2);
+  box-shadow: 0 1px 10px rgba(0,0,0,.2);
+  background: #fff;
+  overflow: hidden
+}
+
+.aside-photo {
+  position: relative;
+  margin: 25px auto 10px;
+  max-width: 80px;
+  text-align: center;
+  z-index: 0
+}
+
+.aside-photo img {
+  width: 100%
+}
+
+.aside-name {
+  position: relative;
+  z-index: 1;
+  margin: 15px 20px 5px;
+  text-align: center
+}
+
+.aside-name span {
+  color: #ff724c;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.2em;
+  margin: 0
+}
+
+.aside-menu {
+  list-style: none;
+  display: block;
+  padding: 25px 0 30px
+}
+
+.aside-menu-icon {
+  display: block;
+  font-size: 21px;
+  margin-bottom: 3px;
+  text-align: center;
+  color: #ff724c
+}
+
+.aside-menu-item {
+  display: block;
+  position: relative;
+  padding: 10px 20px;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  text-decoration: none;
+  outline: 0;
+  opacity: .6;
+  border-bottom: 1px solid rgba(255,255,255,.12);
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+  border-color: #f5f5f5;
+  cursor: pointer
+}
+
+.aside-menu-item:first-child {
+  border-top: 1px solid rgba(255,255,255,.12)
+}
+
+.aside-menu-item:hover {
+  opacity: 1
+}
+
+.aside-menu-item:after {
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  content: '';
+  width: 0;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #ff724c;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out
+}
+
+.aside-menu-item:hover:after {
+  width: 3px;
+  background-color: #ff724c
+}
+
+.aside-menu-item-active {
+  opacity: 1
+}
+
+.aside-menu-item-active:after {
+  width: 3px;
+  background-color: #ff724c
+}
+
+.aside-menu-link {
+  text-decoration: none;
+  color: #000!important
+}
+
+.aside-menu-link:hover {
+  text-decoration: none
+}
+
+@media (max-width: 990px) {
+  aside {
+    overflow-y:scroll
+  }
+}

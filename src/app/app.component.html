@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <div class="row">
+    <jz-header (burgerShow)="onOpen($event)" (burgerClose)="onClose($event)"></jz-header>
+    <div id="aside" class="col-fixed aside-container" #aside>
+      <jz-aside></jz-aside>
+    </div>
+    <div id="main" class="col main">
+      <router-outlet class="main-router"></router-outlet>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,253 @@
+.about-main-content {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  overflow-y: scroll
+}
+
+.portfolio-item {
+  position: relative;
+  min-height: 200px;
+  background: #2f4f4f;
+  color: #888;
+  cursor: pointer
+}
+
+.portfolio-desc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  padding: 5px 20px;
+  background: rgba(245, 245, 245, .95)
+}
+
+.portfolio-desc h5 {
+  display: inline-block;
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #222;
+  font-weight: 700
+}
+
+.portfolio-desc i {
+  color: #ff724c;
+  position: absolute;
+  font-size: 24px;
+  bottom: 14px;
+  right: 20px;
+  margin: 0
+}
+
+.portfolio-tabs {
+  position: relative;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 auto
+}
+
+.portfolio-tabs .work {
+  position: relative;
+  width: 32.5%;
+  margin-bottom: 10px;
+  cursor: pointer;
+  max-height: 205px;
+  -webkit-box-shadow: 0 0 20px 4px rgba(0, 0, 0, .15);
+  box-shadow: 0 0 20px 4px rgba(0, 0, 0, .15);
+  overflow: hidden
+}
+
+.portfolio-tabs .work .work-preview {
+  width: 100%
+}
+
+.portfolio-tabs .work .work-info {
+  display: block;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(245, 245, 245, .95);
+  width: 100%;
+  height: 100%;
+  color: #888;
+  padding: 5px 20px;
+  transition: opacity 0.4s ease;
+}
+.portfolio-tabs .work.hover .work-info {
+  opacity: 1;
+}
+.portfolio-tabs .work .work-info h5 {
+  display: inline-block;
+  font-size: 1rem;
+  margin: 10px 0;
+  font-weight: 700;
+  color: #222
+}
+
+.portfolio-tabs .work .work-info span {
+  color: #666;
+  position: absolute;
+  bottom: 18px;
+  font-size: 12px;
+  left: 20px
+}
+
+.portfolio-tabs .work .work-info i {
+  color: #ff724c;
+  position: absolute;
+  font-size: 24px;
+  bottom: 14px;
+  right: 20px;
+  margin: 0
+}
+
+.portfolio-tabs .work .work-info i.fa-eye {
+  top: 44%;
+  position: absolute;
+  left: 45%;
+  color: #a2a2a2;
+  font-size: 40px
+}
+
+.portfolio-detail {
+  position: absolute;
+  top: 25px;
+  z-index: 2;
+  left: 5%;
+  right: 5%;
+  bottom: 25px;
+  height: initial
+}
+
+.portfolio-detail .portfolio-navs {
+  text-align: center;
+  padding-top: 15px
+}
+
+.portfolio-detail .portfolio-navs .nav-item {
+  position: relative;
+  display: inline-block;
+  margin: 0 3px
+}
+
+.portfolio-detail .portfolio-navs .nav-item a {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  color: #888;
+  cursor: pointer
+}
+
+.portfolio-detail .portfolio-navs .nav-item a:hover {
+  color: #ff724c
+}
+
+.portfolio-detail .portfolio-navs .nav-item a i {
+  line-height: 30px;
+  font-size: 30px
+}
+
+.portfolio-detail .about-main-heading {
+  padding-top: 10px;
+  text-align: center
+}
+
+.portfolio-detail .about-main-heading h1 {
+  display: inline-block;
+  margin: 0;
+  color: #000;
+  font-size: 2em
+}
+
+.portfolio-detail .project-general-info {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px
+}
+
+.portfolio-detail .project-general-info li {
+  margin: 0 0 10px
+}
+
+.portfolio-detail .project-general-info li p {
+  font-size: .875em;
+  margin: 0 0 10px;
+  font-weight: 300
+}
+
+.portfolio-detail .project-general-info li p a {
+  color: #ff724c;
+  text-decoration: none;
+  outline: 0
+}
+
+.portfolio-detail .project-general-info li p i {
+  color: #ff724c;
+  margin-right: 5px
+}
+
+.portfolio-detail .text-justify {
+  text-align: justify
+}
+
+.portfolio-detail .tags {
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+.portfolio-detail .tags li {
+  display: inline-block;
+  margin: 2px 5px 2px 0;
+  cursor: default
+}
+
+.portfolio-detail .tags li a {
+  font-size: 13px;
+  color: #555;
+  padding: 2px 7px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  -webkit-transition: all .2s;
+  transition: all .2s
+}
+
+.portfolio-detail .tags li a:hover {
+  background-color: #ff724c;
+  color: #fff;
+  border-color: #ff724c
+}
+
+.portfolio-detail-img {
+  width: 100%
+}
+
+@media (max-width: 990px) {
+  .portfolio-tabs .work {
+    width: 49.5%
+  }
+  .portfolio-detail {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0
+  }
+}
+
+@media (max-width: 540px) {
+  .portfolio-tabs .work {
+    width: 100%
+  }
+}

@@ -1,0 +1,162 @@
+@import url(https://use.fontawesome.com/releases/v5.0.13/css/all.css);
+
+.about-main-content {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  overflow-y: scroll
+}
+
+.contact-text {
+  font-size: .875em;
+  margin: 0 0 10px;
+  font-weight: 300
+}
+
+.contact-info-block {
+  position: relative;
+  width: 100%;
+  display: block;
+  margin: 0;
+  padding: 10px 10px 10px 0
+}
+
+.contact-info-block .ci-icon {
+  position: absolute;
+  top: 50%;
+  margin-top: -15px
+}
+
+.contact-info-block .ci-icon i {
+  position: relative;
+  font-size: 30px;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  color: #ff724c
+}
+
+.contact-info-block .ci-text {
+  position: relative;
+  padding-left: 50px
+}
+
+.contact-info-block .ci-text h5 {
+  font-size: .9em;
+  margin: 5px 0;
+  letter-spacing: .4px;
+  font-weight: 700;
+  line-height: 1.5em
+}
+
+#form .form-group {
+  position: relative;
+  margin: 0 0 20px
+}
+
+#form .form-group .contact-input {
+  position: relative;
+  border: 1px solid #bbb;
+  border-radius: 0;
+  display: block;
+  font-size: .9em;
+  margin: 0;
+  padding: 10px 35px 10px 12px;
+  width: 100%;
+  background: 0 0;
+  text-align: left;
+  color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: 0;
+  font-family: 'PT Sans', Helvetica, sans-serif
+}
+
+#form .form-group textarea {
+  min-height: 120px
+}
+
+#form .form-group .underline {
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: #ff724c;
+  height: 2px;
+  transition: 0.45s ease;
+}
+#form .form-group.active .underline {
+  left: 0;
+  right: 0;
+}
+#form .form-group i {
+  position: absolute;
+  top: 9px;
+  right: 12px;
+  font-size: 24px;
+  color: #aaa
+}
+#form .form-group.active i {
+  color: #ff724c;
+}
+#form .form-group .help-block {
+  position: absolute;
+  display: inline-block;
+  padding: 0 5px;
+  font-size: .8em;
+  line-height: 1.5em;
+  margin: -2px 0 0 10px;
+  color: #fff;
+  background: #ff4c4c
+}
+
+#form .form-group .help-block:after {
+  content: " ";
+  position: absolute;
+  left: 5px;
+  bottom: 100%;
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid #ff4c4c;
+  border-right: 10px solid transparent
+}
+
+.send-contact button {
+  display: inline-block;
+  position: relative;
+  padding: .8em 2em;
+  margin-bottom: .25em;
+  font-size: .875em;
+  line-height: 1.2;
+  outline: 0;
+  border: 2px solid #ff724c;
+  color: #222;
+  text-shadow: none;
+  background: 0 0;
+  border-radius: 0;
+  font-family: 'PT Sans', Helvetica, sans-serif;
+  -webkit-transition: ease .3s;
+  transition: ease .3s;
+  cursor: pointer
+}
+
+.send-contact button:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: #ff724c
+}
+
+.send-contact button:disabled {
+  opacity: .3
+}
+
+.send-contact button:disabled:hover {
+  color: #222;
+  background-color: #fff
+}
